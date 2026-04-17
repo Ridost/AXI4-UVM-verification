@@ -55,3 +55,39 @@ interface axi4_if #(
   logic                   RLAST;
   logic                   RVALID;
   logic                   RREADY;
+
+modport master (
+  input  ACLK, ARESETn,
+
+  // AW
+  output AWID, AWADDR, AWLEN, AWSIZE, AWBURST, AWVALID,
+  input  AWREADY,
+
+  // W
+  output WDATA, WSTRB, WLAST, WVALID,
+  input  WREADY,
+
+  // B
+  input  BID, BRESP, BVALID,
+  output BREADY,
+
+  // AR
+  output ARID, ARADDR, ARLEN, ARSIZE, ARBURST, ARVALID,
+  input  ARREADY,
+
+  // R
+  input  RID, RDATA, RRESP, RLAST, RVALID,
+  output RREADY
+);
+
+modport monitor (
+  input ACLK, ARESETn,
+
+  input AWID, AWADDR, AWLEN, AWSIZE, AWBURST, AWVALID, AWREADY,
+  input WDATA, WSTRB, WLAST, WVALID, WREADY,
+  input BID, BRESP, BVALID, BREADY,
+  input ARID, ARADDR, ARLEN, ARSIZE, ARBURST, ARVALID, ARREADY,
+  input RID, RDATA, RRESP, RLAST, RVALID, RREADY
+);
+
+endinterface
