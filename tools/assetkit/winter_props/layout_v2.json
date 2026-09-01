@@ -1,0 +1,131 @@
+{
+  "terrain": "terrain_v2.png",
+  "output": "composed_v2.png",
+  "regions": {
+    "snow": {
+      "colour": "#EFE2D0",
+      "place": true
+    },
+    "path": {
+      "colour": "#EDDCC3",
+      "place": false
+    },
+    "drift": {
+      "colour": "#C0BFDB",
+      "place": true
+    },
+    "ice": {
+      "colour": "#BBCFD8",
+      "place": false
+    }
+  },
+  "props": [
+    {
+      "src": "sprites/tree_pine_b@300.png",
+      "x": 1380,
+      "y": 215,
+      "scale": 0.58
+    },
+    {
+      "src": "sprites/tree_pine_a@300.png",
+      "x": 1545,
+      "y": 290,
+      "scale": 0.64,
+      "flip": true
+    },
+    {
+      "src": "sprites/rock_mid_c@70.png",
+      "x": 900,
+      "y": 305,
+      "scale": 0.62
+    },
+    {
+      "src": "sprites/snow_mound_c@110.png",
+      "x": 1255,
+      "y": 335,
+      "scale": 0.62
+    },
+    {
+      "src": "sprites/tree_pine_d@300.png",
+      "x": 700,
+      "y": 405,
+      "scale": 0.75
+    },
+    {
+      "src": "sprites/rock_mid_a@70.png",
+      "x": 1080,
+      "y": 435,
+      "scale": 0.78
+    },
+    {
+      "src": "sprites/tree_pine_c@300.png",
+      "x": 1180,
+      "y": 470,
+      "scale": 0.8,
+      "flip": true
+    },
+    {
+      "src": "sprites/snow_mound_b@110.png",
+      "x": 430,
+      "y": 505,
+      "scale": 0.8
+    },
+    {
+      "src": "sprites/rock_mid_d@70.png",
+      "x": 960,
+      "y": 545,
+      "scale": 0.82
+    },
+    {
+      "src": "sprites/tree_pine_a@300.png",
+      "x": 170,
+      "y": 560,
+      "scale": 0.88
+    },
+    {
+      "src": "sprites/snow_mound_d@110.png",
+      "x": 130,
+      "y": 620,
+      "scale": 0.72
+    },
+    {
+      "src": "sprites/tree_pine_b@300.png",
+      "x": 900,
+      "y": 645,
+      "scale": 0.95,
+      "flip": true
+    },
+    {
+      "src": "sprites/rock_mid_b@70.png",
+      "x": 640,
+      "y": 690,
+      "scale": 0.95
+    },
+    {
+      "src": "sprites/snow_mound_a@110.png",
+      "x": 1150,
+      "y": 700,
+      "scale": 1.0
+    },
+    {
+      "src": "sprites/rock_mid_c@70.png",
+      "x": 80,
+      "y": 735,
+      "scale": 0.8,
+      "flip": true
+    },
+    {
+      "src": "sprites/tree_pine_c@300.png",
+      "x": 640,
+      "y": 755,
+      "scale": 1.12
+    },
+    {
+      "src": "sprites/rock_mid_b@70.png",
+      "x": 1520,
+      "y": 805,
+      "scale": 0.9,
+      "flip": true
+    }
+  ]
+}

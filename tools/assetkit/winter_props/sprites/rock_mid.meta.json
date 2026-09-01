@@ -1,0 +1,20 @@
+{
+  "id": "rock_mid",
+  "kind": "prop",
+  "style": "snowbell-ogu",
+  "placement": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1.0
+    },
+    "baselineOffset": 0,
+    "defaultScale": 1.0
+  },
+  "variants": [
+    "a",
+    "b",
+    "c",
+    "d"
+  ],
+  "displayHeight": 70
+}
