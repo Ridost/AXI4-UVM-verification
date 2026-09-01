@@ -168,6 +168,30 @@ alpha 不動，就還原成一層柔和的接地陰影。
 
 ---
 
+## 擺位驗證
+
+用眼睛對座標很容易出錯——路是斜的、冰的邊界是彎的，差 30px 就有一顆石頭浮在冰上。
+在 `layout.json` 加一段 `regions`，就可以讓 `check_layout.py` 依顏色把地形分區，
+再檢查每個素材的**接地帶**（底部 12%）落在哪裡：
+
+```json
+"regions": {
+  "snow":  { "colour": "#EFE2D0", "place": true  },
+  "path":  { "colour": "#EDDCC3", "place": false },
+  "drift": { "colour": "#C0BFDB", "place": true  },
+  "ice":   { "colour": "#BBCFD8", "place": false }
+}
+```
+
+```bash
+python3 check_layout.py winter_props/layout_v2.json
+```
+
+`place: false` 的區域被接地帶佔到 25% 以上就報錯，回傳碼 1，可以直接當 build 的關卡。
+走道要留空、冰面不能站東西，這兩條靠肉眼很難守住。`compose` 會忽略 `regions` 這段。
+
+---
+
 ## 檢查產出
 
 ```bash
@@ -221,4 +245,11 @@ cd winter_props && ./build.sh
 ```
 
 產出 `sprites/`（12 張素材 + 3 份 meta 骨架）與 `composed_reference.png`。
+
+`terrain_v2.png` + `layout_v2.json` 是第二版地形的擺位（平面化的地形、
+描邊分區、可讀的雪徑），產出 `composed_v2.png`：
+
+```bash
+python3 ../check_layout.py layout_v2.json && python3 ../assetkit.py compose layout_v2.json
+```
 `meta.json` 裡的 `footprint` 與 `baselineOffset` 還是空的，要手填。
